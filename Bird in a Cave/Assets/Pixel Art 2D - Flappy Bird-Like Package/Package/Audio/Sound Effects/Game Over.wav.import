@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://h0ndk1046hy4"
+path="res://.godot/imported/Game Over.wav-767769b60aeea4437f230fb8cb43c0c7.sample"
+
+[deps]
+
+source_file="res://Assets/Pixel Art 2D - Flappy Bird-Like Package/Package/Audio/Sound Effects/Game Over.wav"
+dest_files=["res://.godot/imported/Game Over.wav-767769b60aeea4437f230fb8cb43c0c7.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

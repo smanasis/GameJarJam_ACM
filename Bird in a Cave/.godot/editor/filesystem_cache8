@@ -1,0 +1,61 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1747243425
+export_presets.cfg::TextFile::-1::1747239803::0::1::::<><>::
+::res://Assets/::1747216202
+::res://Assets/Icons/::1747238859
+BirdSprite.png::CompressedTexture2D::6220737938185940006::1747238859::1747238859::1::::<><>::
+cycle.png::CompressedTexture2D::6550945092572733372::1747161649::1747161649::1::::<><>::
+hamburger-menu.png::CompressedTexture2D::1756255322067030426::1747161649::1747161649::1::::<><>::
+play-button.png::CompressedTexture2D::1172682749103590289::1747211055::1747211055::1::::<><>::
+::res://Assets/Pixel Art 2D - Flappy Bird-Like Package/::1746832993
+::res://Assets/Pixel Art 2D - Flappy Bird-Like Package/Package/::1746832993
+::res://Assets/Pixel Art 2D - Flappy Bird-Like Package/Package/Animations/::1746832993
+::res://Assets/Pixel Art 2D - Flappy Bird-Like Package/Package/Animations/Spritesheets/::1746832993
+Death.png::CompressedTexture2D::4469960022706850629::1746832993::1746832993::1::::<><>::
+Fly.png::CompressedTexture2D::3522027872227157918::1746832993::1746832993::1::::<><>::
+::res://Assets/Pixel Art 2D - Flappy Bird-Like Package/Package/Audio/::1746832993
+::res://Assets/Pixel Art 2D - Flappy Bird-Like Package/Package/Audio/Music/::1746832993
+Background Music.mp3::AudioStreamMP3::7912577260513839017::1746832993::1746832993::1::::<><>::
+::res://Assets/Pixel Art 2D - Flappy Bird-Like Package/Package/Audio/Sound Effects/::1746832993
+Click.wav::AudioStreamWAV::7784586827760258571::1746832993::1746832993::1::::<><>::
+Death.wav::AudioStreamWAV::2934247055961555842::1746832993::1746832993::1::::<><>::
+Fly.wav::AudioStreamWAV::5563377727507739744::1746832993::1746832993::1::::<><>::
+Game Over.wav::AudioStreamWAV::543726594179682769::1746832993::1746832993::1::::<><>::
+Record.wav::AudioStreamWAV::4440527812418193224::1746832993::1746832993::1::::<><>::
+::res://Assets/Pixel Art 2D - Flappy Bird-Like Package/Package/Sprites/::1746832993
+::res://Assets/Pixel Art 2D - Flappy Bird-Like Package/Package/Sprites/Game Objects/::1746832993
+Background.png::CompressedTexture2D::4245390850076640158::1746832993::1746832993::1::::<><>::
+Bat.png::CompressedTexture2D::7505931395094553466::1746832993::1746832993::1::::<><>::
+Foreground.png::CompressedTexture2D::7734591801013033613::1746832993::1746832993::1::::<><>::
+Obstacle_Down.png::CompressedTexture2D::8506831068605767983::1746832993::1746832993::1::::<><>::
+Ostacolo_Up.png::CompressedTexture2D::2024508622802746917::1746832993::1746832993::1::::<><>::
+Terrain.png::CompressedTexture2D::5688934490495020680::1746832993::1746832993::1::::<><>::
+::res://Assets/Pixel Art 2D - Flappy Bird-Like Package/Package/Sprites/UI Elements/::1746833273
+Box.png::CompressedTexture2D::1426311800265108363::1746832993::1746832993::1::::<><>::
+Rectangle.png::CompressedTexture2D::8499627872053224789::1746832993::1746832993::1::::<><>::
+::res://Assets/Pixel Art Bird 16x16/::1746833274
+BirdSprite.png::CompressedTexture2D::7720368407056944706::1746833247::1746833274::1::::<><>::
+BirdSpriteBig.png::CompressedTexture2D::8651895509519392677::1746833247::1746833274::1::::<><>::
+::res://Assets/Sound/::1747241490
+Beat_3 ending.wav::AudioStreamWAV::522072112646929081::1747218119::1747218120::1::::<><>::
+Ftera_826fa540-3eb6-45b9-be2c-8f87647a088f.wav::AudioStreamWAV::531472862056344217::1747215713::1747215719::1::::<><>::
+Xtyphma cutted.wav::AudioStreamWAV::7888539795959421274::1747217083::1747217083::1::::<><>::
+Xtyphma_37646fc1-0f5b-4b31-8788-37e7043259e2.wav::AudioStreamWAV::6514388150290773452::1747215713::1747215719::1::::<><>::
+::res://Main/::1747211342
+::res://Main/Character/::1747239603
+bat.gd::GDScript::-1::1747236895::0::1::::<>CharacterBody2D<>::
+Bat.tscn::PackedScene::8356509765649337032::1747239603::0::1::::<><>::res://Main/Character/bat.gd<>uid://bqgdjw4ia6dcw::::res://Assets/Pixel Art 2D - Flappy Bird-Like Package/Package/Animations/Spritesheets/Fly.png<>uid://dknjdlgh2pgus::::res://Assets/Sound/Xtyphma cutted.wav<>uid://cli7avhk72mke::::res://Assets/Pixel Art 2D - Flappy Bird-Like Package/Package/Audio/Sound Effects/Fly.wav
+bird.gd::GDScript::-1::1747236592::0::1::::<>CharacterBody2D<>::
+Bird.tscn::PackedScene::1341800362098049045::1747239603::0::1::::<><>::uid://dh82lsx0ck8ha::::res://Assets/Pixel Art Bird 16x16/BirdSprite.png<>res://Main/Character/bird.gd<>uid://dknjdlgh2pgus::::res://Assets/Sound/Xtyphma cutted.wav<>uid://htpjsen2cajh::::res://Assets/Sound/Ftera_826fa540-3eb6-45b9-be2c-8f87647a088f.wav
+::res://Main/EnemySpawner/::1747239660
+enemy_spawner.gd::GDScript::-1::1747239660::0::1::::<>Node2D<>::
+enemy_spawner.tscn::PackedScene::6896597548420010228::1747239603::0::1::::<><>::res://Main/EnemySpawner/enemy_spawner.gd
+::res://Main/GameOver/::1747239603
+game_over.gd::GDScript::-1::1747221010::0::1::::<>Control<>::
+game_over.tscn::PackedScene::1014096168182705834::1747239603::0::1::::<><>::res://Main/GameOver/game_over.gd<>uid://c0lldxrhqtl7y::::res://Assets/Icons/cycle.png<>uid://0a0jeptrlv3g::::res://Assets/Icons/hamburger-menu.png<>uid://dknjdlgh2pgus::::res://Assets/Sound/Xtyphma cutted.wav
+::res://Main/Gameplay/::1747239791
+main.gd::GDScript::-1::1747239660::0::1::::<>Node2D<>::
+main.tscn::PackedScene::670294227347047657::1747239791::0::1::::<><>::res://Main/Gameplay/main.gd<>uid://td8ix332wgmf::::res://Main/Character/Bird.tscn<>uid://b1qq745uh42cw::::res://Assets/Pixel Art 2D - Flappy Bird-Like Package/Package/Sprites/Game Objects/Background.png<>uid://digxukbr6630d::::res://Assets/Pixel Art 2D - Flappy Bird-Like Package/Package/Sprites/Game Objects/Foreground.png<>uid://cnb06jnsoywtk::::res://Assets/Pixel Art 2D - Flappy Bird-Like Package/Package/Sprites/Game Objects/Terrain.png<>uid://c5i07o3xhlliq::::res://Main/EnemySpawner/enemy_spawner.tscn<>uid://ho5pl3uje1e0::::res://Assets/Sound/Beat_3 ending.wav<>uid://di56ai6cjm5ml::::res://Assets/Pixel Art 2D - Flappy Bird-Like Package/Package/Audio/Sound Effects/Click.wav
+::res://Main/Menu/::1747239603
+menu.gd::GDScript::-1::1747221010::0::1::::<>Node2D<>::
+menu.tscn::PackedScene::6524890252245233817::1747239603::0::1::::<><>::res://Main/Menu/menu.gd<>uid://b1qq745uh42cw::::res://Assets/Pixel Art 2D - Flappy Bird-Like Package/Package/Sprites/Game Objects/Background.png<>uid://digxukbr6630d::::res://Assets/Pixel Art 2D - Flappy Bird-Like Package/Package/Sprites/Game Objects/Foreground.png<>uid://cnb06jnsoywtk::::res://Assets/Pixel Art 2D - Flappy Bird-Like Package/Package/Sprites/Game Objects/Terrain.png<>uid://qyb6ccbjbhjl::::res://Assets/Icons/play-button.png<>uid://di56ai6cjm5ml::::res://Assets/Pixel Art 2D - Flappy Bird-Like Package/Package/Audio/Sound Effects/Click.wav

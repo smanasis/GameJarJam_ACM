@@ -1,0 +1,92 @@
+[gd_scene load_steps=8 format=3 uid="uid://opiasgg1s1gg"]
+
+[ext_resource type="Script" path="res://Main/GameOver/game_over.gd" id="1_q1mxe"]
+[ext_resource type="Texture2D" uid="uid://c0lldxrhqtl7y" path="res://Assets/Icons/cycle.png" id="2_aj0x2"]
+[ext_resource type="Texture2D" uid="uid://0a0jeptrlv3g" path="res://Assets/Icons/hamburger-menu.png" id="3_kmmpo"]
+[ext_resource type="AudioStream" uid="uid://dknjdlgh2pgus" path="res://Assets/Sound/Xtyphma cutted.wav" id="4_u8rg0"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_wpldv"]
+outline_size = 15
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_bw2bu"]
+outline_size = 15
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ivh15"]
+outline_size = 15
+outline_color = Color(0, 0, 0, 1)
+
+[node name="GameOver" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_q1mxe")
+
+[node name="GameOverText" type="Label" parent="."]
+layout_mode = 2
+offset_left = 400.0
+offset_top = 196.0
+offset_right = 900.0
+offset_bottom = 296.0
+text = "GAME OVER!"
+label_settings = SubResource("LabelSettings_wpldv")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Restart" type="TextureButton" parent="."]
+process_mode = 3
+layout_mode = 2
+offset_left = 400.0
+offset_top = 400.0
+offset_right = 500.0
+offset_bottom = 500.0
+texture_normal = ExtResource("2_aj0x2")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="RestartLabel" type="Label" parent="Restart"]
+layout_mode = 0
+offset_left = 21.0
+offset_top = -24.0
+offset_right = 78.0
+offset_bottom = -1.0
+text = "Restart
+"
+label_settings = SubResource("LabelSettings_bw2bu")
+
+[node name="Menu" type="TextureButton" parent="."]
+process_mode = 3
+layout_mode = 2
+offset_left = 800.0
+offset_top = 400.0
+offset_right = 900.0
+offset_bottom = 500.0
+texture_normal = ExtResource("3_kmmpo")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="MenuLabel" type="Label" parent="Menu"]
+layout_mode = 0
+offset_left = 26.0
+offset_top = -23.0
+offset_right = 71.0
+text = "Menu
+"
+label_settings = SubResource("LabelSettings_ivh15")
+
+[node name="Score" type="Label" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="GameOver" type="AudioStreamPlayer2D" parent="."]
+process_mode = 3
+stream = ExtResource("4_u8rg0")
+volume_db = 20.0
+pitch_scale = 1.7
+
+[node name="ClickButtom" type="AudioStreamPlayer2D" parent="."]
+process_mode = 3
+
+[connection signal="pressed" from="Restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="Menu" to="." method="_on_menu_pressed"]

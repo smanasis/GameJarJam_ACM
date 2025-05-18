@@ -1,0 +1,17 @@
+
+-------------------------------------------------------------------------------------------------------------
+Links of the assets I used for the game:
+	https://demonstick-games.itch.io/pixel-art-2d-flappy-bird-like
+	https://ma9ici4n.itch.io/pixel-art-bird-16x16
+	https://game-icons.net/1x1/delapouite/hamburger-menu.html
+	https://game-icons.net/1x1/lorc/cycle.html
+	https://game-icons.net/1x1/guard13007/play-button.html
+
+Credits given to for creating the assets:
+	-1st link: PoorGameDev 
+		Author(itch.io): DemonStick Games
+	-2nd link:
+		Author(itch.io): ma9ici4n
+	-3rd link: (creator)Delapouite
+	-4th link: (creator)Lorc
+	-5th link: (creator)Guard13007

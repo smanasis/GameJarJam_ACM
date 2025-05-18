@@ -1,0 +1,91 @@
+[gd_scene load_steps=12 format=3 uid="uid://jsxwbcyvrdaf"]
+
+[ext_resource type="Script" path="res://Main/Gameplay/main.gd" id="1_7sauu"]
+[ext_resource type="PackedScene" uid="uid://td8ix332wgmf" path="res://Main/Character/Bird.tscn" id="1_vkpvj"]
+[ext_resource type="Texture2D" uid="uid://b1qq745uh42cw" path="res://Assets/Pixel Art 2D - Flappy Bird-Like Package/Package/Sprites/Game Objects/Background.png" id="2_o4uqu"]
+[ext_resource type="Texture2D" uid="uid://digxukbr6630d" path="res://Assets/Pixel Art 2D - Flappy Bird-Like Package/Package/Sprites/Game Objects/Foreground.png" id="3_5hvkb"]
+[ext_resource type="Texture2D" uid="uid://cnb06jnsoywtk" path="res://Assets/Pixel Art 2D - Flappy Bird-Like Package/Package/Sprites/Game Objects/Terrain.png" id="3_die3j"]
+[ext_resource type="Script" path="res://Main/Gameplay/camera_2d.gd" id="5_xpgen"]
+[ext_resource type="PackedScene" uid="uid://c5i07o3xhlliq" path="res://Main/EnemySpawner/enemy_spawner.tscn" id="7_it42h"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8eo8o"]
+size = Vector2(45, 807)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_nsgdt"]
+distance = -1.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ebwh0"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_b054j"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_7sauu")
+
+[node name="Background" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(2, 2)
+texture = ExtResource("2_o4uqu")
+
+[node name="Background2" type="Sprite2D" parent="Background"]
+position = Vector2(270, 0)
+texture = ExtResource("2_o4uqu")
+
+[node name="Foreground" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("3_5hvkb")
+
+[node name="Foreground2" type="Sprite2D" parent="Foreground"]
+position = Vector2(270, 0)
+texture = ExtResource("3_5hvkb")
+
+[node name="ScoreLabel" type="Label" parent="."]
+offset_left = 287.0
+offset_top = -213.0
+offset_right = 327.0
+offset_bottom = -190.0
+
+[node name="LeftBoundry" type="Area2D" parent="."]
+texture_filter = 1
+collision_layer = 2
+
+[node name="Terrain" type="Sprite2D" parent="LeftBoundry"]
+position = Vector2(159, 64)
+rotation = 1.5708
+scale = Vector2(3, 3)
+texture = ExtResource("3_die3j")
+
+[node name="LeftCollide" type="CollisionShape2D" parent="LeftBoundry"]
+position = Vector2(-283.5, 65.5)
+shape = SubResource("RectangleShape2D_8eo8o")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0, 1)
+scale = Vector2(2, 2)
+zoom = Vector2(1.5, 1.5)
+position_smoothing_speed = 100.0
+script = ExtResource("5_xpgen")
+
+[node name="Bird" parent="." instance=ExtResource("1_vkpvj")]
+collision_mask = 6
+
+[node name="WorldBoundries" type="StaticBody2D" parent="."]
+collision_layer = 4
+
+[node name="WorldBoundry1" type="CollisionShape2D" parent="WorldBoundries"]
+position = Vector2(1, 401)
+shape = SubResource("WorldBoundaryShape2D_nsgdt")
+
+[node name="WorldBoundry2" type="CollisionShape2D" parent="WorldBoundries"]
+position = Vector2(0, -363)
+rotation = 3.14159
+shape = SubResource("WorldBoundaryShape2D_ebwh0")
+
+[node name="WorldBoundry3" type="CollisionShape2D" parent="WorldBoundries"]
+position = Vector2(428, 0)
+rotation = -1.5708
+shape = SubResource("WorldBoundaryShape2D_b054j")
+
+[node name="EnemySpawner" parent="." node_paths=PackedStringArray("target") instance=ExtResource("7_it42h")]
+target = NodePath("../Bird")
+
+[connection signal="body_entered" from="LeftBoundry" to="Bird" method="_on_area_2d_body_entered"]

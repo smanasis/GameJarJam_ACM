@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dky58ydrf08qn"
+path="res://.godot/imported/Background Music.mp3-a9c9e7250ea08f9e67e18e9d8320f787.mp3str"
+
+[deps]
+
+source_file="res://Assets/Pixel Art 2D - Flappy Bird-Like Package/Package/Audio/Music/Background Music.mp3"
+dest_files=["res://.godot/imported/Background Music.mp3-a9c9e7250ea08f9e67e18e9d8320f787.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

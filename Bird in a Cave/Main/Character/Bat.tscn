@@ -1,0 +1,93 @@
+[gd_scene load_steps=12 format=3 uid="uid://drb7q3fcwigtk"]
+
+[ext_resource type="Script" path="res://Main/Character/bat.gd" id="1_bj01y"]
+[ext_resource type="Texture2D" uid="uid://bqgdjw4ia6dcw" path="res://Assets/Pixel Art 2D - Flappy Bird-Like Package/Package/Animations/Spritesheets/Fly.png" id="1_smlr4"]
+[ext_resource type="AudioStream" uid="uid://dknjdlgh2pgus" path="res://Assets/Sound/Xtyphma cutted.wav" id="3_x6lb7"]
+[ext_resource type="AudioStream" uid="uid://cli7avhk72mke" path="res://Assets/Pixel Art 2D - Flappy Bird-Like Package/Package/Audio/Sound Effects/Fly.wav" id="4_16fg6"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4k6bg"]
+radius = 8.0
+height = 18.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_75ekc"]
+atlas = ExtResource("1_smlr4")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jv53o"]
+atlas = ExtResource("1_smlr4")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xv4rr"]
+atlas = ExtResource("1_smlr4")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tn50q"]
+atlas = ExtResource("1_smlr4")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2aj5y"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_75ekc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jv53o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xv4rr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tn50q")
+}],
+"loop": true,
+"name": &"default",
+"speed": 7.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1hh8f"]
+radius = 12.0
+height = 28.0
+
+[node name="Bat" type="CharacterBody2D"]
+texture_filter = 1
+collision_mask = 7
+script = ExtResource("1_bj01y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2, 2)
+shape = SubResource("CapsuleShape2D_4k6bg")
+
+[node name="DamageDetection" type="Area2D" parent="."]
+
+[node name="Bat" type="AnimatedSprite2D" parent="DamageDetection"]
+sprite_frames = SubResource("SpriteFrames_2aj5y")
+frame = 3
+frame_progress = 0.752811
+
+[node name="DamageArea" type="CollisionShape2D" parent="DamageDetection"]
+position = Vector2(2, 1)
+shape = SubResource("CapsuleShape2D_1hh8f")
+
+[node name="FollowBirdTimer" type="Timer" parent="."]
+wait_time = 7.0
+one_shot = true
+autostart = true
+
+[node name="DestroyItselfTimer" type="Timer" parent="."]
+wait_time = 12.0
+autostart = true
+
+[node name="GameOver" type="AudioStreamPlayer2D" parent="."]
+process_mode = 3
+stream = ExtResource("3_x6lb7")
+volume_db = 20.0
+pitch_scale = 1.7
+
+[node name="WingsFlap" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_16fg6")
+attenuation = 30.0
+
+[connection signal="body_entered" from="DamageDetection" to="." method="_on_damage_detection_body_entered"]
+[connection signal="timeout" from="FollowBirdTimer" to="." method="_on_follow_bird_timer_timeout"]
+[connection signal="timeout" from="DestroyItselfTimer" to="." method="_on_destroy_itself_timer_timeout"]

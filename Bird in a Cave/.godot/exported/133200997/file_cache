@@ -1,0 +1,6 @@
+res://Main/Character/Bat.tscn::9ea14092219ef4c255dd69bea2116cb8::1747239603::res://.godot/exported/133200997/export-35735f330960bdf43f6f254d15254a86-Bat.scn
+res://Main/Character/Bird.tscn::2427e89481a8abb0e2ff7f894aa841cf::1747239603::res://.godot/exported/133200997/export-224b25854cde56e5eed2727e4667f10d-Bird.scn
+res://Main/EnemySpawner/enemy_spawner.tscn::5a58f085fd9dcd50401c740fa9f80b53::1747239603::res://.godot/exported/133200997/export-bd342f8af5999883415cac3e9c13bf9b-enemy_spawner.scn
+res://Main/GameOver/game_over.tscn::6799bbe41860ab382ea4bdb74a6c538d::1747239603::res://.godot/exported/133200997/export-fecd110719afe3cc45302726c0a0b5e0-game_over.scn
+res://Main/Gameplay/main.tscn::6aac9aab5e83ff866170e46b5360048d::1747239791::res://.godot/exported/133200997/export-2442e25f2395b8394b4690a898dc803e-main.scn
+res://Main/Menu/menu.tscn::37d414961c234beda0fe433969e54c47::1747239603::res://.godot/exported/133200997/export-4254bf1fa92db0c8414ee3a377ca98c9-menu.scn
